@@ -1,5 +1,5 @@
 const ALPHABET = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N", "Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-const MOVEMENTS = ['LEFT', 'RIGHT', 'UP', 'DOWN']
+const MOVEMENTS = ['LEFT-DOWN', 'LEFT-UP', 'LEFT', 'RIGHT-DOWN', 'RIGHT-UP', 'RIGHT', 'UP', 'DOWN']
 
 const  WORDS = [
 	'PARA', 
@@ -197,8 +197,6 @@ const  WORDS = [
 	'REALIDAD', 
 	'SENTIDO', 
 	'LADO', 
-	'MI', 
-	'TU', 
 	'CAMBIO', 
 	'ALLI', 
 	'MANO', 

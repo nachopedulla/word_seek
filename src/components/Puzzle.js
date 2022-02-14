@@ -76,31 +76,72 @@ const Puzzle = () => {
                         for (let index = 1; index < word.length; index++) {
                             requiredCells.push(cell + index)
                         }
-                    if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
-                        return requiredCells
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
                     }
-                    break;
-                }
+                break;
                 case 'UP': 
                     if (line - word.length >= 0) {
                         for (let index = 1; index < word.length; index++) {
                             requiredCells.push(cell + (index * 14 * -1))
                         }
-                    if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
-                        return requiredCells
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
                     }
                     break
-                }
                 case 'DOWN': 
                     if (36 - line >= word.length) {
                         for (let index = 1; index < word.length; index++) {
                             requiredCells.push(cell + (index * 14))
                         }
-                    if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
-                        return requiredCells
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
                     }
                     break
-                }
+                case 'LEFT-DOWN': 
+                    if (column >= word.length && 36 - line >= word.length) {
+                        for (let index = 1; index < word.length; index++) {
+                            requiredCells.push(cell + (index * 13))
+                        }      
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
+                    }
+                    break
+                case 'LEFT-UP': 
+                    if (column >= word.length  && line - word.length >= 0) {
+                        for (let index = 1; index < word.length; index++) {
+                            requiredCells.push(cell + (index * 15 * -1))
+                        }      
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
+                    }
+                    break
+                case 'RIGHT-DOWN': 
+                    if (14 - column >= word.length && 36 - line >= word.length)  {
+                        for (let index = 1; index < word.length; index++) {
+                            requiredCells.push(cell + (index * 13 * -1))
+                        }      
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
+                    }
+                    break   
+                case 'RIGHT-UP': 
+                    if (14 - column >= word.length && line - word.length >= 0)  {
+                        for (let index = 1; index < word.length; index++) {
+                            requiredCells.push(cell + (index * 15))
+                        }      
+                        if (!cells.some(usedCell => requiredCells.some(requiredCell => requiredCell === usedCell))) {
+                            return requiredCells
+                        }
+                    }
+                    break
+
             }
             attemps ++
         }
@@ -121,6 +162,7 @@ const Puzzle = () => {
                 requiredCells = getMovementCells(word.word, cell, cells)
             }
             cells = [...cells, ...requiredCells]
+            console.log(requiredCells)
             word.position = requiredCells
             auxWords[i] = word
             for (let index in word.word) {
