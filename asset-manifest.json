@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/word_seek/static/css/main.22a8009b.chunk.css",
+    "main.js": "/word_seek/static/js/main.d2411f98.chunk.js",
+    "main.js.map": "/word_seek/static/js/main.d2411f98.chunk.js.map",
+    "runtime-main.js": "/word_seek/static/js/runtime-main.9cbbc5f0.js",
+    "runtime-main.js.map": "/word_seek/static/js/runtime-main.9cbbc5f0.js.map",
+    "static/js/2.ecae0b89.chunk.js": "/word_seek/static/js/2.ecae0b89.chunk.js",
+    "static/js/2.ecae0b89.chunk.js.map": "/word_seek/static/js/2.ecae0b89.chunk.js.map",
+    "static/js/3.5015b783.chunk.js": "/word_seek/static/js/3.5015b783.chunk.js",
+    "static/js/3.5015b783.chunk.js.map": "/word_seek/static/js/3.5015b783.chunk.js.map",
+    "index.html": "/word_seek/index.html",
+    "static/css/main.22a8009b.chunk.css.map": "/word_seek/static/css/main.22a8009b.chunk.css.map",
+    "static/js/2.ecae0b89.chunk.js.LICENSE.txt": "/word_seek/static/js/2.ecae0b89.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9cbbc5f0.js",
+    "static/js/2.ecae0b89.chunk.js",
+    "static/css/main.22a8009b.chunk.css",
+    "static/js/main.d2411f98.chunk.js"
+  ]
+}
